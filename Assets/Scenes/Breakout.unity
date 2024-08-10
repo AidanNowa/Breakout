@@ -2980,7 +2980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1252741502}
-  moveSpeed: 5
+  moveSpeed: 7
 --- !u!1001 &1253286618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3788,7 +3788,7 @@ MonoBehaviour:
   rb2d: {fileID: 1611463745}
   maxInitialAngle: 0.67
   moveSpeed: 3
-  acceleration: 1.1
+  acceleration: 1.01
   maxStartY: 4
 --- !u!50 &1611463745
 Rigidbody2D:

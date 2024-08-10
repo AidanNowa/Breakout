@@ -44,12 +44,17 @@ public class Ball : MonoBehaviour
 */
     private void OnCollisionEnter2D(Collision2D collision) {
         Paddle paddle = collision.collider.GetComponent<Paddle>();
+        Block block = collision.collider.GetComponent<Block>();
         if (paddle) {
             Vector2 currSpeed = rb2d.velocity;
             Vector2 dir = newDirection(collision);
 
             //Debug.Log("Hit Paddle");
             rb2d.velocity = acceleration * dir * rb2d.velocity.magnitude;
+        }
+        else if (block) {
+            Destroy(collision.gameObject);
+            Debug.Log("Block destroyed");
         }
     }
 
@@ -67,7 +72,7 @@ public class Ball : MonoBehaviour
         //normalized
         float normOffset = offset / (paddleWidth / 2) * maxInitialAngle;
 
-        Vector2 newDirection = new Vector2(normOffset, 1).normalized;
+        Vector2 newDirection = new Vector2(normOffset, 1);
         
         return newDirection;
     }
