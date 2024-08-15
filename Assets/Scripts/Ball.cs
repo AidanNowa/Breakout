@@ -76,26 +76,5 @@ public class Ball : MonoBehaviour
         
         return newDirection;
     }
-/*
-#function to change angle from bounce off paddle
-#perpendicular when in middle, larger angle when further out
-func new_direction(collider):
-	var ball_y = position.y
-	var pad_y = collider.position.y
-	var dist = ball_y - pad_y
-	var new_dir := Vector2()
-	
-	#flip the horizontal direction
-	if direction.x > 0:
-		new_dir.x = -1
-	else:
-		new_dir.x = 1
-		
-	#handle vertical direction
-	#divide distance ball is from center of paddle by the height of the paddle
-	#Mutiply by constant to limit what the vector will be
-	new_dir.y = (dist / (collider.p_height / 2)) * MAX_Y_Vector
-	
-	return new_dir.normalized()
-    */
+
 }
