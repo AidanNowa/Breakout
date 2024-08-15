@@ -3787,7 +3787,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 1611463745}
   maxInitialAngle: 0.67
-  moveSpeed: 3
+  moveSpeed: 4
   acceleration: 1.01
   maxStartY: 4
 --- !u!50 &1611463745
